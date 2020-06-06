@@ -24,12 +24,24 @@
     </div>
     <?php 
         if(isset($_GET['erro'])){
-
     ?>
         <div class="row justify-content-md-center">
             <div class="col-6 col-md-4">
                 <div class="alert alert-danger alert-dismissible fade show" role="alert">
                 Email ou senha incompatíveis
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            </div> 
+        </div>
+    <?php
+        }else if(isset($_SESSION['email'])){
+    ?>
+        <div class="row justify-content-md-center">
+            <div class="col-6 col-md-4">
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                Existem dados de sessão salvos, caso queira retirá-los <a href="../../banco/logout.php?logout=true" class="alert-link">entre aqui</a>
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
                 </button>
