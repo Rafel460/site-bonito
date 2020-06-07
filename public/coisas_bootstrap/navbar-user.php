@@ -17,9 +17,9 @@
     </div>  
       <!-- Termina o dropdown -->
       <a <? if($pagina == "tela-inicio"){echo "class='nav-item nav-link active'"; }else{ echo "class='nav-item nav-link'";}?> href="../tela-inicio/tela-inicio.php"><img src="https://img.icons8.com/material-outlined/20/000000/home--v2.png"/>&nbsp;&nbsp;Home</a>
-      <a class="nav-item nav-link" href="#"><img src="https://img.icons8.com/ios-glyphs/20/000000/e-commerce--v1.png"/>&nbsp;&nbsp;MarketPlace</a>
-      <a class="nav-item nav-link" href="#"><img src="https://img.icons8.com/ios-glyphs/20/000000/e-commerce--v1.png"/>&nbsp;&nbsp;</a>
-      <a class="nav-item nav-link" href="#"><img src="https://img.icons8.com/ios-glyphs/20/000000/e-commerce--v1.png"/>&nbsp;&nbsp;</a>
+      <a  <? if($pagina == "market-place"){echo "class='nav-item nav-link active'"; }else{ echo "class='nav-item nav-link'";}?> href="../market-place/market-place.php"><img src="https://img.icons8.com/ios-glyphs/20/000000/e-commerce--v1.png"/>&nbsp;&nbsp;MarketPlace</a>
+      <a class="nav-item nav-link" href="#"><img src="https://img.icons8.com/windows/20/000000/news.png"/>&nbsp;&nbsp;Ultimas Notícias</a>
+      <a class="nav-item nav-link" href="#"><img src="https://img.icons8.com/windows/20/000000/journal.png"/>&nbsp;&nbsp;Releases</a>
     </div>
     <ul class="navbar-nav ml-auto mr-20">
         
