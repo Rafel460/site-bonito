@@ -8,7 +8,7 @@
                             <img src="https://www.jamf.com/jamf-nation/img/default-avatars/generic-user-purple.png" class="rounded-circle">
                         </div>
                         <div class="col-md-12 col-sm-12 col-xs-12 user-detail-section1 text-center">
-                            <button id="btn-contact" (click)="clearModal()" data-toggle="modal" data-target="#contact" class="btn btn-success btn-block follow">Contactarme</button> 
+                            <button id="btn-contact" (click)="clearModal()" data-toggle="modal" data-target="#contact" class="btn btn-success btn-block follow">Mandar mensagem</button> 
                             <button class="btn btn-warning btn-block">Descargar Curriculum</button>                               
                         </div>
                         <div class="row user-detail-row">
@@ -51,7 +51,7 @@
                                                 <div role="tabpanel" class="tab-pane fade show active" id="profile">
                                                             <div class="row">
                                                                 <div class="col-md-2">
-                                                                    <label>Nombre</label>
+                                                                    <label>Nome: </label>
                                                                 </div>
                                                                 <div class="col-md-6">
                                                                     <p><?=$username?></p>
@@ -59,28 +59,28 @@
                                                             </div>
                                                             <div class="row">
                                                                 <div class="col-md-2">
-                                                                    <label>Email</label>
+                                                                    <label>Email: </label>
                                                                 </div>
                                                                 <div class="col-md-6">
                                                                     <p><?=$email?></p>
                                                                 </div>
                                                             </div>
-                                                            <div class="row">
+                                                            <!-- <div class="row">
                                                                 <div class="col-md-2">
-                                                                    <label>Teléfono</label>
+                                                                    <label>Te</label>
                                                                 </div>
                                                                 <div class="col-md-6">
                                                                     <p>12345678</p>
                                                                 </div>
-                                                            </div>
-                                                            <div class="row">
+                                                            </div> -->
+                                                            <!-- <div class="row">
                                                                 <div class="col-md-2">
                                                                     <label>Profesion</label>
                                                                 </div>
                                                                 <div class="col-md-6">
                                                                     <p>Developer</p>
                                                                 </div>
-                                                            </div>
+                                                            </div> -->
                                                 </div>
                                                 
                                 
@@ -98,7 +98,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="contact">Contactarme</h5>
+                    <h5 class="modal-title" id="contact">Mandar email</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">×</span>
                     </button>
