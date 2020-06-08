@@ -23,6 +23,7 @@
         <img src=<?echo '"'.$registros['path'].'"'?> class="card-img-top image-responsive" alt="..." width="300px" height="300px">
         <div class="card-body">
         <h5 class="card-title"><?=$registros['nomeprod']?></h5>
+        <p class="card-subtitle mb-2 text-muted"><?=$registros['username']?></p>
         <p class="card-text"><?=$registros['descricao']?></p>
         <p class="card-text text-right">Preço R$ <?=$registros['preco']?></p>
         </div>
@@ -32,7 +33,7 @@
         <? }?>
         
         </div>
-            <br><br>
+            <br>
             <div class="row justify-content-md-center">
             <a class="btn btn-outline-dark" href="inserir-produto.php">Colocar um Produto!</a>
             </div>
