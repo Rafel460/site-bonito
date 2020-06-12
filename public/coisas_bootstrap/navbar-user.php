@@ -1,4 +1,6 @@
-
+<? 
+    require_once("select-message.php");
+?>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
  
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -11,8 +13,8 @@
         <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><?=$username?></a>
         <div class="dropdown-menu">
             <a <? if($pagina=="user-page" ){echo "class='dropdown-item active'";}else{echo "class='dropdown-item'"; }?> href="../user-page/user-page.php"><img src="https://img.icons8.com/material-sharp/20/000000/customize-view.png"/>&nbsp;&nbsp;Conf. da Conta</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
+            <!-- <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a> -->
         <div class="dropdown-divider"></div>
         <a class="dropdown-item" href="../../banco/logout.php?logout=true"><img src="https://img.icons8.com/windows/20/000000/logout-rounded-left.png"/>&nbsp;&nbsp;Logout</a>
     </div>  
@@ -23,7 +25,19 @@
       <a <? if($pagina == "releases"){echo "class='nav-item nav-link active'"; }else{ echo "class='nav-item nav-link'";}?> href="../releases/releases.php"><img src="https://img.icons8.com/windows/20/000000/journal.png"/>&nbsp;&nbsp;Releases</a>
     </div>
     <ul class="navbar-nav ml-auto mr-20">
-        
+    <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <img src="https://img.icons8.com/android/24/000000/bell.png"/>
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <?while($registros = mysqli_fetch_assoc($query)){?>
+      <?if(empty($registros['remetente'])){?>
+        <a class="dropdown-item" href="#">Você não possui nenhuma mensagem</a>
+      <?}?>
+    <a class="dropdown-item" href="#"><?=$registros['remetente']?></a>
+      <?  }?>
+  </div>
+</div>
         </ul>
     <nav class="navbar navbar-dark bg-dark">
       <form class="form-inline my-2 my-lg-0" action="../usuarios-cadastrados/usuarios-cadastrados.php" method="get">
@@ -31,5 +45,6 @@
         <button class="btn btn-outline-light my-2 my-sm-0" type="submit" name="submit">Pesquisar</button>
         </form>
       </nav>
-  </div>
+      
+  </div>|
 </nav>
