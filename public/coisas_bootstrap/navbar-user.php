@@ -34,7 +34,9 @@
       <?if(empty($registros['remetente'])){?>
         <a class="dropdown-item" href="#">Você não possui nenhuma mensagem</a>
       <?}?>
-    <a class="dropdown-item" href="#"><?=$registros['remetente']?></a>
+     <h6 class="dropdown-header"><?=$registros['remetente']?></h6>
+     <a class="dropdown-item" href="#"><?=$registros['assunto']?></a>
+     <div class="dropdown-divider"></div>
       <?  }?>
   </div>
 </div>

@@ -18,10 +18,13 @@
     <div class="col-6 col-md-4">
         <ul class="list-group list-group-flush">
             <?php
-                while($linha = mysqli_fetch_assoc($query)){
-                    echo "<li class='list-group-item'>".$linha['username'].", ".$linha['email']."</li>";
-                }
-            ?>
+                while($linha = mysqli_fetch_assoc($query)){ ?>
+                <li class='list-group-item'> <?=$linha['username'].", ".$linha['email']?> <a class="btn btn-outline-dark" <?php 
+                $username = $linha['username'];
+                $email = $linha['email'];
+                echo 'href="../friend-page/friend-page.php?username='.$username.'&email='.$email.'"';
+                ?>>Acessar a página do Usuario</a></li>
+                <?}?>
         </ul>
     </div>
 </div>

@@ -8,8 +8,11 @@
                             <img src="https://www.jamf.com/jamf-nation/img/default-avatars/generic-user-purple.png" class="rounded-circle">
                         </div>
                         <div class="col-md-12 col-sm-12 col-xs-12 user-detail-section1 text-center">
+                            <?if(isset($isFriend) && $isFriend == true){?>
                             <button id="btn-contact" (click)="clearModal()" data-toggle="modal" data-target="#contact" class="btn btn-success btn-block follow">Mandar mensagem</button> 
-                                                         
+                            <?}else{?>
+                                <button id="btn-contact" data-toggle="modal" class="btn btn-success btn-block follow disabled">Mandar mensagem</button> 
+                            <?}?>                            
                         </div>
                         <div class="row user-detail-row">
                             <div class="col-md-12 col-sm-12 user-detail-section2 pull-left">
@@ -27,12 +30,17 @@
                             <div class="row">
                                 <div class="col-md-8 col-sm-6 col-xs-6 profile-header-section1 pull-left">
                                     <h1><?=$username?></h1>
-                                    <h5>Developer</h5>
                                 </div>
                                 <!-- Alterar Aqui!!!! -->
-                                <div class="col-md-4 col-sm-6 col-xs-6 profile-header-section1 text-right pull-rigth">
-                                    <a href="/search" class="btn btn-primary btn-block">Alterar dados</a>
-                                </div>
+                                <?if(isset($isFriend) && $isFriend == true){?>
+                                    <div class="col-md-4 col-sm-6 col-xs-6 profile-header-section1 text-right pull-rigth">
+                                    <a class="btn btn-primary btn-block disabled">Alterar dados</a>
+                                    </div>
+                                <?}else{?>
+                                    <div class="col-md-4 col-sm-6 col-xs-6 profile-header-section1 text-right pull-rigth">
+                                    <a href="#" class="btn btn-primary btn-block">Alterar dados</a>
+                                    </div>
+                                <?}?>
                             </div>
                         </div>
                         <div class="col-md-12">
@@ -110,6 +118,10 @@
                     <div class="form-group">
                         <label for="email">Email do destinatário: </label>
                         <input type="email" class="form-control" id="email" name="email" min="12" max="100" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="assunto">Assunto: </label>
+                        <input type="text" class="form-control" id="assunto" name="assunto" min="3" max="100" required>
                     </div>
                     <div class="form-group">
                         <label for="mensagem">Mensagem: </label>
