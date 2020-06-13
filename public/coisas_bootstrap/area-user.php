@@ -116,10 +116,6 @@
                         <p for="msj">Envie um email para que a pessoa possa responder. <br> Ele cairá nas notificações do usuario</p>
                     </div>
                     <div class="form-group">
-                        <label for="email">Email do destinatário: </label>
-                        <input type="email" class="form-control" id="email" name="email" min="12" max="100" required>
-                    </div>
-                    <div class="form-group">
                         <label for="assunto">Assunto: </label>
                         <input type="text" class="form-control" id="assunto" name="assunto" min="3" max="100" required>
                     </div>

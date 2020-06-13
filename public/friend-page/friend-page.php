@@ -9,7 +9,9 @@
 <body>
     <? 
         $pagina = "friend-page";
+        session_start();
         $username = $_GET['username'];
+        $_SESSION['destinatario'] = $_GET['email'];
         $email = $_GET['email'];
         $isFriend = true;
         require_once("../coisas_bootstrap/area-user-css.php");

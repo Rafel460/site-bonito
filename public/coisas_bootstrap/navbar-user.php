@@ -27,9 +27,10 @@
     <ul class="navbar-nav ml-auto mr-20">
     <div class="dropdown">
   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <span class="badge badge-light"><?$numM = mysqli_fetch_assoc($query_c); if($numM['numM']>0){echo $numM['numM'];} ?></span>
   <img src="https://img.icons8.com/android/24/000000/bell.png"/>
   </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">  
       <?while($registros = mysqli_fetch_assoc($query)){?>
       <?if(empty($registros['remetente'])){?>
         <a class="dropdown-item" href="#">Você não possui nenhuma mensagem</a>
@@ -48,5 +49,5 @@
         </form>
       </nav>
       
-  </div>|
+  </div>
 </nav>
