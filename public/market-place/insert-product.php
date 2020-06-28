@@ -11,7 +11,7 @@
         $pasta = "../../uploads/";
         $temp = $_FILES['imagem']['tmp_name'];
         $novoNome = uniqid().".jpg";
-        chmod($pasta, "777 -R");
+        chmod($pasta, "0777 -R");
 
         if(move_uploaded_file($temp, $pasta.$novoNome)){
             $path = $pasta.$novoNome;
