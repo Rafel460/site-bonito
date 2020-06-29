@@ -38,7 +38,8 @@
                                     </div>
                                 <?}else{?>
                                     <div class="col-md-4 col-sm-6 col-xs-6 profile-header-section1 text-right pull-rigth">
-                                    <a href="../editar-user/editar-user.php" class="btn btn-primary btn-block">Alterar dados</a>
+                                    <form action="./edit-user.php" method="post">
+                                    <button type="submit" name="submit" class="btn btn-primary btn-block">Salvar Alterações</button>
                                     </div>
                                 <?}?>
                             </div>
@@ -59,20 +60,25 @@
                                                 <div role="tabpanel" class="tab-pane fade show active" id="profile">
                                                             <div class="row">
                                                                 <div class="col-md-2">
-                                                                    <label>Nome: </label>
+                                                                    <label for="username">Nome: </label>
                                                                 </div>
                                                                 <div class="col-md-6">
-                                                                    <p><?=$username?></p>
+                                                                    <div class="form-group">
+                                                                        <input type="text" class="form-control" id="username" name="username" min="4" max="100" required>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                             <div class="row">
                                                                 <div class="col-md-2">
-                                                                    <label>Email: </label>
+                                                                    <label for="email">Senha: </label>
                                                                 </div>
                                                                 <div class="col-md-6">
-                                                                    <p><?=$email?></p>
+                                                                    <div class="form-group">
+                                                                        <input type="password" class="form-control" id="senha" name="senha" min="10" max="100" required>
+                                                                    </div>
                                                                 </div>
                                                             </div>
+                                                            </form>
                                                             <!-- <div class="row">
                                                                 <div class="col-md-2">
                                                                     <label>Te</label>
